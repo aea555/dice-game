@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Lobster&family=Rubik:wght@300;400;500;800;900&display=swap');
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #33332e;
+    color: #e8e8df;
+    text-align: center;
+}
+
+.invisible {
+    visibility: hidden !important;
+}
+
+.undisplayed {
+    display: none !important;
+}
+
+@media screen and (min-width: 280px) and (max-width: 767px) {
+    .title {
+        font-size: 2.75em;
+    }
+    .buttons {
+        font-size: 1.5em;
+    }
+    .result {
+        font-size: 2em;
+    }
+    .players {
+        font-size: 1.5em;
+        column-gap: 6vw;
+    }
+    .link {
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .title {
+        font-size: 4em;
+    }
+    .buttons {
+        font-size: 2em;
+    }
+    .result {
+        font-size: 3em;
+    }
+    .players {
+        font-size: 2em;
+        column-gap: 15vw;
+    }
+    .link {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .title {
+        font-size: 3em;
+    }
+    .buttons {
+        font-size: 1.5em;
+        margin-block: 0.5em 0.5em;
+    }
+    .result {
+        font-size: 2.25em;
+    }
+    .players {
+        font-size: 1.5em;
+        column-gap: 17vw;
+        padding-block: 0.5em;
+    }
+    .link {
+        font-size: 2.25em;
+        margin-top: 0.25em;
+    }
+    .dice {
+        width: 18.75vw;
+        height: 18.75vw;
+    }
+}
+
+
+/***************/
+
+
+/* HEADER */
+
+.header-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1em;
+    padding: 1em;
+}
+
+.title {
+    font-family: 'Lobster', cursive;
+    text-shadow: 1.5px 2.5px 3px #AB1D03;
+}
+
+.buttons {
+    display: inline-block;
+    font-family: 'Rubik', sans-serif;
+    text-shadow: 1.5px 2.5px 3px #AB1D03;
+    margin-block: 1em 1em;
+}
+
+.buttons:hover {
+    cursor: pointer;
+    -webkit-text-stroke: 1px #AB1D03;
+}
+
+.separator:hover {
+    cursor: default;
+    -webkit-text-stroke: 0px black;
+}
+
+
+/***************/
+
+
+/* MAIN */
+
+.wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    column-gap: 5vw;
+    align-items: center;
+    row-gap: 5vw;
+    width: 100vw;
+}
+
+.players {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 1em;
+    font-family: 'Dancing Script', cursive;
+}
+
+.dice {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    background: #AB1D03;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 10px;
+    border: 2px black solid;
+    box-shadow: 3px 2px 4px black;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100%;
+}
+
+.circle {
+    margin: auto;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    background: #fff;
+    border: 4px solid black;
+}
+
+
+/***************/
+
+
+/* FOOTER */
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+    column-gap: 1em;
+}
+
+.link {
+    color: #e8e8df;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    text-shadow: 1.5px 2.5px 3px #AB1D03;
+}
+
+.link:hover {
+    -webkit-text-stroke: 1px #AB1D03;
+}
+
+
+/***************/
