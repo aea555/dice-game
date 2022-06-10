@@ -33,7 +33,7 @@ body {
         font-size: 1.5em;
     }
     .result {
-        font-size: 2em;
+        font-size: 1.8em;
     }
     .players {
         font-size: 1.5em;
@@ -68,7 +68,7 @@ body {
         font-size: 6em;
     }
     .buttons {
-        font-size: 3em;
+        font-size: 3.5em;
         margin-block: 0;
     }
     .result {
@@ -118,6 +118,9 @@ body {
 
 .result {
     display: block;
+    font-family: 'Rubik', sans-serif;
+    text-shadow: 1.5px 2.5px 3px #AB1D03;
+    margin-top: 1em;
 }
 
 .buttons:hover {
@@ -165,6 +168,7 @@ body {
     border-radius: 10px;
     border: 2px black solid;
     box-shadow: 3px 2px 4px black;
+    animation: bounceInLeft .75s ease-in-out;
 }
 
 .row {
