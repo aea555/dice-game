@@ -1,6 +1,8 @@
 let dices = document.querySelectorAll(".dice");
 let container = document.querySelector(".wrap");
 let button = document.querySelector("#button");
+let score1 = 0;
+let score2 = 0;
 
 let createRandomRoll = () => {
     let randomRoll = Math.ceil(Math.random() * 6);
@@ -63,6 +65,7 @@ let throwDices = () => {
         newDice2.classList.remove("undisplayed");
     }
     displayWinner(pos1, pos2, dice1, dice2);
+    button.innerHTML = "Rethrow";
 };
 
 let reset = () => {
@@ -83,41 +86,72 @@ let reset = () => {
         playerNames[i].classList.add("undisplayed");
     }
     document.querySelector(".result").innerHTML = "";
-}
+};
 
 let displayWinner = (pos1, pos2, roll1, roll2) => {
     let result = document.querySelector(".result");
     if (roll1 === roll2) {
-        result.innerHTML = "Draw!";
+        result.innerHTML =
+            "Draw! <br> Player 1: " + score1 + "<br> Player 2: " + score2;
     } else {
         if (pos1 > pos2) {
             let leftDice = document.querySelector(".pos2");
             let rightDice = document.querySelector(".pos1");
             if (leftDice.classList.contains("greater")) {
-                result.innerHTML = "Player 1 Wins!";
+                score1++;
+                result.innerHTML =
+                    "Player 1 Wins! <br> Player 1: " +
+                    score1 +
+                    "<br>  Player 2: " +
+                    score2;
             }
             if (rightDice.classList.contains("greater")) {
-                result.innerHTML = "Player 2 Wins!";
+                score2++;
+                result.innerHTML =
+                    "Player 2 Wins! <br> Player 1: " +
+                    score1 +
+                    "<br>  Player 2: " +
+                    score2;
             }
         }
         if (pos2 > pos1) {
             let leftDice = document.querySelector(".pos1");
             let rightDice = document.querySelector(".pos2");
             if (leftDice.classList.contains("greater")) {
-                result.innerHTML = "Player 1 Wins!";
+                score1++;
+                result.innerHTML =
+                    "Player 1 Wins! <br> Player 1: " +
+                    score1 +
+                    "<br>  Player 2: " +
+                    score2;
             }
             if (rightDice.classList.contains("greater")) {
-                result.innerHTML = "Player 2 Wins!";
+                score2++;
+                result.innerHTML =
+                    "Player 2 Wins! <br> Player 1: " +
+                    score1 +
+                    "<br>  Player 2: " +
+                    score2;
             }
         }
         if (pos1 === pos2) {
             let leftDice = document.querySelector(".pos2");
             let rightDice = document.querySelector(".pos1");
             if (leftDice.classList.contains("greater")) {
-                result.innerHTML = "Player 1 Wins!";
+                score1++;
+                result.innerHTML =
+                    "Player 1 Wins! <br> Player 1: " +
+                    score1 +
+                    "<br>  Player 2: " +
+                    score2;
             }
             if (rightDice.classList.contains("greater")) {
-                result.innerHTML = "Player 2 Wins!";
+                score2++;
+                result.innerHTML =
+                    "Player 2 Wins! <br> Player 1: " +
+                    score1 +
+                    "<br>  Player 2: " +
+                    score2;
             }
         }
     }
